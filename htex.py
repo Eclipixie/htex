@@ -2,6 +2,16 @@ import argparse
 import urllib.request
 import re
 
+title = """
+                                 
+  #   #           # # #          
+  #   #     #     #              
+  # # #   # # #   # # #   #   #  
+  #   #     #     #         #    
+  #   #     #     # # #   #   #  
+                                 
+"""
+
 parser = argparse.ArgumentParser(
     prog="htex",
     description="scrapes html from a webpage",
@@ -41,6 +51,8 @@ parser.add_argument(
 args = parser.parse_args()
 
 url = args.url
+
+print(title)
 
 prefix = "http://"
 if (args.https): prefix = "https://"
